@@ -1,0 +1,82 @@
+.item img{
+    
+    max-width: 100%;
+    width: 120px;
+   height: 200px;
+   cursor: zoom-in;
+   border-radius: 5px;
+   box-shadow: 7px 15px 17px #3c3c3c;
+   
+}
+
+.list {
+   
+    padding-top: 25px ;
+    transform-style: preserve-3d ;
+    transform: perspective(1000px);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+   
+    
+}
+
+
+
+.list .item{
+    transition: .5s;
+    filter: brightness(0.1);
+}
+
+.list .item:hover{
+    filter: brightness(1);
+    transform: translateZ(200px);
+}
+
+.list .item:hover + *{
+    filter: brightness(0.6);
+    transform:translateZ(150px) rotateY(45deg);
+}
+
+.list .item:hover + *+*{
+    filter: brightness(0.4);
+    transform:translateZ(70px) rotateY(20deg);
+}
+
+.list .item:hover + *+*+*{
+    filter: brightness(0.2);
+    transform:translateZ(30px) rotateY(10deg);
+}
+
+
+.list .item:hover + * +* +* +*{
+    filter: brightness(0.1);
+    transform:translateZ(15px) rotateY(5deg);
+}
+
+
+
+.list .item:has(+*:hover){
+    filter: brightness(0.6);
+    transform:translateZ(150px) rotateY(-40deg);
+}
+
+.list .item:has(+*+*:hover){
+    filter: brightness(0.4);
+    transform:translateZ(70px) rotateY(-20deg);
+}
+
+.list .item:has(+*+*+*:hover){
+    filter: brightness(0.2);
+    transform:translateZ(30px) rotateY(-10deg);
+}
+
+
+.list .item:has(+* +* +* +*:hover){
+    filter: brightness(0.1);
+    transform:translateZ(15px) rotateY(-5deg);
+}
+
+
