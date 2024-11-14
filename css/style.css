@@ -315,8 +315,3 @@ margin-right: 8px;
 }
 
 
-@media (prefers-color-scheme: dark){
-    body{
-        background-color: #000000;
-    }
-}
